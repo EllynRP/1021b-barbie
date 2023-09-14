@@ -10,3 +10,20 @@
     flex-wrap: wrap;
     justify-content: center;*/
 }
+
+.barrapesquisa{
+    height: 30px;
+    border: 1px solid #bebebe;
+    width: 200px;
+    border-radius: 5px;
+    font-size: 1.4rem;
+}
+
+.barrapesquisa:focus-visible{
+    outline: 1px solid rgba(255, 105, 180, 0.568);
+}
+
+.pesquisa{
+    padding: 50px;
+}
+
