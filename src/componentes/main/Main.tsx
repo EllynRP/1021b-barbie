@@ -1,4 +1,5 @@
-import {useState} from "react"
+import React, {useEffect, useState} from "react"
+// import axios from "axios"
 import Filme from "../filme/Filme"
 import './Main.css'
 
@@ -12,6 +13,13 @@ type FilmesTypes = {
 export default function Main(){
     //hook
     const [texto, setTexto] = useState("")
+    // const [count, setCount] = useState(0)
+
+    // useEffect(() => {
+    //     axios.get('').this(Response => {
+    //     })
+    // })
+
     const filmes:FilmesTypes[] = [{ 
         id:1,
         titulo:"Barbie", 
@@ -61,7 +69,6 @@ export default function Main(){
             </div>
             <main className="content-main">
             {filmes.filter((filmes)=>filmes.titulo.toLowerCase().includes(texto.toLowerCase())).map((filmes:FilmesTypes)=><Filme key={filmes.id} titulo={filmes.titulo} sinopse={filmes.sinopse} imagem={filmes.imagem}/>)}
-
 
             {/* <Filme 
                 titulo="Barbie" 
